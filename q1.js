@@ -153,3 +153,35 @@ kmtomiles(km)
     }
     console.log(vowelArray);
 }
+
+//Get nth character of string
+{
+    string1 = "mandib";
+    nthTerm = 4;
+    myFunction = (str1,n) =>{
+        let array1 = [];
+        let splitstr = str1.split("");
+        for(i = 0; i<n;i++){
+            if(i===(n-1)){
+                console.log(`The ${n} term of the string ${string1} is ${splitstr[i]}`)
+            }
+        }
+    }
+    myFunction(string1, nthTerm);
+}
+
+/*Write a function that takes a string as argument. 
+The string contains the substring 'is'. Return the index of 'is'.
+ */
+{
+    string1 = "praise";
+    string2 = "is";
+    subStrPos = (str1) =>{
+        for(i=0; i<str1.length;i++){
+            if(str1.substr(i,2) === string2){
+                console.log(`The position of ${string2} is ${i}`)
+            }
+        }
+    }
+    subStrPos(string1);
+}
