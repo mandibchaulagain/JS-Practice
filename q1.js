@@ -67,3 +67,46 @@ kmtomiles(km)
     console.log(array1);
     
 }
+
+// Sort an array from lowest to highest
+
+{
+    let array1 = [2,1,4,3,5] 
+    let sortedArray = (array1) => {
+        for(i = 0; i<5; i++){
+            for(j = 0; j<5;j++){
+                if(array1[j]>array1[j+1]){
+                    temp = array1[j];
+                    array1[j] = array1[j+1];
+                    array1[j+1] = temp;
+                }
+            }
+        }
+    }
+    sortedArray(array1);
+    console.log(array1);
+}
+
+// create a function that filters out negative numbers
+{
+    let array1 = [1, -2, -3, 4, 5];
+    let removeNegative = (array) => {
+        return array.filter((number) => {
+            return number >= 0;
+        });
+    };
+    array1 = removeNegative(array1);/*Assigned the result of removeNegative(array1) back to 
+    array1 to store the filtered array.*/
+    console.log(array1);
+}
+
+//Remove the spaces found in a string
+
+{
+    var randomString = "     Mandib C hau lag ain  ";
+    console.log(randomString.trim());
+    console.log(randomString.replace(/\s+/g, ''));
+    /*\s+ matches one or more whitespace characters (including spaces, tabs, and line breaks).
+    The g flag at the end (/.../g) indicates a global search, meaning
+    it will replace all occurrences of the pattern in the string. */
+}
