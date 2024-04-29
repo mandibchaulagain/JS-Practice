@@ -110,3 +110,46 @@ kmtomiles(km)
     The g flag at the end (/.../g) indicates a global search, meaning
     it will replace all occurrences of the pattern in the string. */
 }
+
+// Return a Boolean if a number is divisible by 10 using if
+
+{
+    let divByTen = (num) =>{
+        if(num % 10 === 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    divByTen(10);
+    console.log(divByTen(10));
+}
+// Return a Boolean if a number is divisible by 10 using conditional operator
+{
+    const booleanNum = (num) => {
+        return num % 10 === 0 ? true : false
+    }
+    
+    console.log(booleanNum(20))
+}
+
+//convert string to array
+{
+    let string1 = "mandib";
+    let splitword = string1.split("");
+    console.log(splitword);
+}
+
+//Return the number of vowels in a string
+{
+    let string1 = "mandib";
+    vowelArray = [];
+    let splitword = string1.split("");
+    for(i=0;i<6;i++){
+        if (splitword[i] === 'a' || splitword[i] === 'e' || splitword[i] === 'i' || splitword[i] === 'o' || splitword[i] === 'u'){
+            vowelArray.push(splitword[i]);
+        }
+    }
+    console.log(vowelArray);
+}
