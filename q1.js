@@ -185,3 +185,20 @@ The string contains the substring 'is'. Return the index of 'is'.
     }
     subStrPos(string1);
 }
+
+/*Write a function that takes an object with two 
+properties as argument. It should return the value 
+of the property with key country.*/
+
+{
+    let countryObj = {country: "Nepal",continent:"Asia"};//the order of property makes no diff.
+    //using "" on country or not is not making a diff.
+    returnCountry = (obj) =>{
+        return obj["country"];//using square brackets property accessor, we need to use "" else it won't work
+        //return obj.country; this works as well
+        //return obj["country","continent"]; using this shows continent only
+    }
+    console.log(returnCountry(countryObj));//a = returnCountry(countryObj);
+    // console.log(a); output was the same
+}
+
