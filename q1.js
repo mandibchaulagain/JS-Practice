@@ -202,3 +202,15 @@ of the property with key country.*/
     // console.log(a); output was the same
 }
 
+/*Write a function that takes an object with two properties and a string as arguments.
+It should return the value of the property with key equal to the value of the string*/
+
+{
+    let continentObj = {country:'Nepal', continent : 'Asia'};
+    let key = "continent";
+    returnContinent = (cObj,k) =>{
+        return cObj[k];//when we want to use property of an object through a variable, we should use []
+    }
+    a= returnContinent(continentObj, key);
+    console.log(a);
+}
