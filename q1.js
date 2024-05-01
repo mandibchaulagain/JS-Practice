@@ -228,6 +228,9 @@ It should return the value of the property with key equal to the value of the st
     }
     lastWord(string1);
 }
+
+//Given a string s, find the length of the longest substring without repeating characters.
+
 {
     const string1 = "dvdf";
     function lengthOfLongestSubstring(s) {
