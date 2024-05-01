@@ -214,3 +214,41 @@ It should return the value of the property with key equal to the value of the st
     a= returnContinent(continentObj, key);
     console.log(a);
 }
+
+//return the string's last word's length, without using trim
+{
+    const string1 = "My nam  e is mandib  ";
+    let lastWord = (str1)=>{
+        const b = str1.split(" ");//never forget to use space btw "" for split, else it will give array with 'm','y'...so on
+        c = b.filter((e)=>{//filtering here is better than trim as trim takes the initial and final spaces in factor
+            if(e.length!==0)
+                return e;
+        }).pop().length;
+        console.log(c);
+    }
+    lastWord(string1);
+}
+{
+    const string1 = "dvdf";
+    function lengthOfLongestSubstring(s) {
+        const map = {}; // Map to store the index of the last occurrence of each character
+        let left = 0; // Left boundary of the current substring
+        
+        let maxLength = 0; // Length of the longest substring without repeating characters
+        
+        for (let i = 0; i < s.length; i++) {
+            const currentChar = s[i];
+            // Update the left boundary to be the maximum of current position of the character in the map + 1 or the current left value
+            left = Math.max(left, map[currentChar] + 1 || 0);
+            // Update the map with the current character's position
+            map[currentChar] = i;
+            // Update the maxLength to be the maximum of current maxLength and the length of the current substring
+            maxLength = Math.max(maxLength, i - left + 1);
+        }
+        
+        return maxLength;
+    }
+    
+    console.log(lengthOfLongestSubstring(string1)); // Output: 3
+
+}
