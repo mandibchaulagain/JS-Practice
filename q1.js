@@ -280,3 +280,32 @@ It should return the value of the property with key equal to the value of the st
     
     console.log(compareVersion("1.10.1.1000","1.10.1.0.0.0.0.0.0.01"))
 }
+//a more efficient soln
+{
+    var compareVersion = function(ver1, ver2) {
+        const nums1 = ver1.split('.').map( n => parseInt(n) );
+        const nums2 = ver2.split('.').map( n => parseInt(n) );
+    
+        while(nums1.length > 0 && nums2.length > 0) {
+            const num1 = nums1.shift();
+            const num2 = nums2.shift();
+            if(num1 == num2) continue;
+            if(num1 < num2) return -1;
+            else return 1;
+        }
+    
+        while(nums1.length > 0) {
+            const num = nums1.shift();
+            if(num == 0) continue;
+            return 1;
+        }
+    
+        while(nums2.length > 0) {
+            const num = nums2.shift();
+            if(num == 0) continue;
+            return -1;
+        }
+    
+        return 0;
+    };
+}
