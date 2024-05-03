@@ -1,23 +1,144 @@
-header{
-    background-color: #ADBBda;
-    align-items: center;
+/* here, we style the content of the navbar */
+.Mcontainer *{
+    margin: 0;
+    padding: 0; /*pushes the content to the left totally, margin and padding*/
+    box-sizing: border-box; /*it absorbs extra width to fit by shrinking content box*/
+}
+.Mcontainer li {
+    list-style: none; /*removes dots of a list*/
+}
+.Mcontainer a{
+    text-decoration: none;  /*removes the underline of <a>*/
+}
+
+.Mcontainer .navbar{
     display: flex;
-    position: ;
-    white-space: nowrap;
-    height: 30px;
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-    border: none;
+    align-items: center;/*vertically centered along cross-axis*/
+    justify-content: space-between;/*put space between the two content along main-axis*/
+    background-color: teal;
+    padding: 20px;
+    color: #fff;/*gives white color to logo and hamburger*/
+}
+.Mcontainer .nav-links a {
+    color: #fff;
+}
+.Mcontainer .logo {
+    font-size: 32px;
+}
+.Mcontainer .menu{
+    display: flex; /*menu items were arranged in a row*/
+    gap: 1em; /*prevented congestion of menu items*/
+    font-size: 18px;
+}
+.Mcontainer .menu li:hover {
+    background-color: #4c9e9e;
     border-radius: 5px;
+    transition: 0.3s ease;
 }
-header *{
-    display: inline;
+.Mcontainer .menu li {
+    padding: 5px 14px;
 }
-header li{
-    margin: 5em;
+.Mcontainer .services{
+    position: relative;
 }
+
+.Mcontainer .dropdown{
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute;/*using this will stop the whole navbar from moving to show dropdown*/
+    display: none;
+    top: 35px;/*separating the dp box from the menu*/
+}
+.Mcontainer .dropdown li + li {
+    margin-top: 10px;/*giving margin btw the dp1,2,3..*/
+}
+.Mcontainer .dropdown li {
+    text-align: center;
+    width: 8em;/*bringing the dp1 to one line*/
+    padding: 0.5em 1em;/*makes the dp1,2,3,4.. box bigger*/
+}
+.Mcontainer .dropdown li:hover {
+    background-color: #4c9e9e;
+}
+.Mcontainer .services:hover .dropdown{
+    display: block;/*showing the dropdown in a table, if used flex it would show dd sidways*/
+}
+.Mcontainer .practices{
+    position: relative;
+    background-color: ;
+}
+.Mcontainer .dropdown1{
+    background-color: rgb(64, 84, 84);
+    padding: 1em 0;
+    position: absolute;/*using this will stop the whole navbar from moving to show dropdown*/
+    display: none;
+    top: 35px;/*separating the dp box from the menu*/
+}
+.Mcontainer .dropdown1 li + li {
+    margin-top: 10px;/*giving margin btw the dp1,2,3..*/
+}
+.Mcontainer .dropdown1 li {
+    text-align: center;
+    width: 8em;/*bringing the dp1 to one line*/
+    padding: 0.5em 1em;/*makes the dp1,2,3,4.. box bigger*/
+}
+.Mcontainer .dropdown1 li:hover {
+    background-color: #4c9e9e;
+}
+.Mcontainer .practices:hover .dropdown1{
+    display: block;/*showing the dropdown in a table, if used flex it would show dd sidways*/
+}
+
+/**/
+.Mcontainer input[type = checkbox] {
+    display: none; /*makes the checkbox disappear*/
+}
+.Mcontainer .hamburger {
+    display: none;/*makes the hamburger disappear*/
+    font-size: 24px;
+    user-select: none;
+}
+@media (max-width: 768px){
+    .Mcontainer .menu{
+        display: none;
+        position: absolute;
+        background-color: red;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .Mcontainer .menu li:hover{
+        display: inline block;
+        background-color: green;
+    }
+    .Mcontainer .menu li+li {
+        margin-top: 12px;
+    }
+    .Mcontainer input[type = checkbox]:checked ~ .menu{
+        display:block;
+    }
+    .Mcontainer .hamburger{
+        display: block;
+    }
+    .Mcontainer .dropdown,
+    .Mcontainer .dropdown1{
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+        
+    }
+    .Mcontainer .dropdown :hover,
+    .Mcontainer .dropdown1 :hover{
+        background-color: red;
+    }
+    .Mcontainer .dropdown li:hover,
+    .Mcontainer .dropdown1 li:hover{
+        background-color: aqua;
+    }
+
+}
+
+
+
+
