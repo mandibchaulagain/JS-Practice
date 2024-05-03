@@ -255,3 +255,28 @@ It should return the value of the property with key equal to the value of the st
     console.log(lengthOfLongestSubstring(string1)); // Output: 3
 
 }
+
+// Given two version numbers, version1 and version2, compare them.
+
+{
+    var compareVersion = function(version1, version2) {
+        var v1Array = version1.split('.');
+        var v2Array = version2.split('.');
+        var length = Math.max(v1Array.length, v2Array.length);
+        
+        for (var i = 0; i < length; i++) {
+            var num1 = parseInt(v1Array[i]) || 0;
+            var num2 = parseInt(v2Array[i]) || 0;
+            
+            if (num1 == num2) {
+                continue;
+            }
+            
+            return num1 > num2 ? 1 : -1;
+        }
+        
+        return 0;       
+    };
+    
+    console.log(compareVersion("1.10.1.1000","1.10.1.0.0.0.0.0.0.01"))
+}

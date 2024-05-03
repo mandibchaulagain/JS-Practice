@@ -47,7 +47,8 @@
     padding: 1em 0;
     position: absolute;/*using this will stop the whole navbar from moving to show dropdown*/
     display: none;
-    top: 35px;/*separating the dp box from the menu*/
+    top: 31px;
+    /*separating the dp box from the menu*/
 }
 .Mcontainer .dropdown li + li {
     margin-top: 10px;/*giving margin btw the dp1,2,3..*/
