@@ -2,9 +2,13 @@ const clickMeButton = document.getElementById('clickMeButton');
 
 const arrayColor = ["red","blue","yellow"];
 
+var currentColor = -1;
+var arrayValue;
 function clicksWork(){
-    const arrayValue = Math.floor(Math.random()*arrayColor.length);
+    do{
+        arrayValue = Math.floor(Math.random()*arrayColor.length);
+    }while(currentColor=== arrayValue);
     document.querySelector("#cf1.colorFlipper").style.backgroundColor = arrayColor[arrayValue];
-    clickMeButton.addEventListener('click',clicksWork);
+    currentColor = arrayValue;
 }
 clickMeButton.addEventListener('click',clicksWork);
