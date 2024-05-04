@@ -1,6 +1,7 @@
 const clickMeButton = document.getElementById('clickMeButton');
 
+
 function clicksWork(){
-    console.log(`Enter vayo hai`)
+    document.querySelector("#cf1.colorFlipper").style.backgroundColor = "red";
 }
 clickMeButton.addEventListener('click',clicksWork);
