@@ -4,7 +4,6 @@ const arrayColor = ["red","blue","yellow"];
 var currentColor = -1;
 var arrayValue;
 
-
 //for the two divs
 const selectableDivs = document.querySelectorAll('.colorDiv');
 
@@ -37,4 +36,21 @@ function fixArr(){
         currentColor = arrayValue;
     }
     clickMeButton.addEventListener('click',clicksWork);
+}
+
+function infiniteHex(){
+    function generateRandomColor() {
+        // Generate random values for red, green, and blue
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+
+        // Construct the CSS RGB color value
+        var randomColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+
+        // Apply the random color to the background
+        document.querySelector("#cf1.colorFlipper").style.backgroundColor = randomColor;
+        document.getElementById("bg1").innerHTML = randomColor;
+    }
+    clickMeButton.addEventListener('click',generateRandomColor);
 }
