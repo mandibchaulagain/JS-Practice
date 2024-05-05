@@ -7,6 +7,7 @@ var arrayValue;
 //for the two divs
 const selectableDivs = document.querySelectorAll('.colorDiv');
 
+fixArr();//kinda made it like the default
 function handleDivClick(event){
     
     switch(event.currentTarget.id) {
