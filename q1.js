@@ -309,3 +309,18 @@ It should return the value of the property with key equal to the value of the st
         return 0;
     };
 }
+
+//Remove Duplicates from sorted array
+
+{
+    var removeDuplicates = function(nums) {
+        let i = 0;
+        for (let j = 0; j < nums.length; j++) {
+            if (nums.indexOf(nums[j]) === j) {
+                nums[i++] = nums[j];
+            }
+        }
+        return i;
+    };
+    console.log(removeDuplicates([1,1,2]));
+}
