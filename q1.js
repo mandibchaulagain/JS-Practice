@@ -324,3 +324,14 @@ It should return the value of the property with key equal to the value of the st
     };
     console.log(removeDuplicates([1,1,2]));
 }
+
+//what's the bug
+{
+    function showMessage(marks){
+        const message = marks || "Absent";
+        console.log(`Marks ${message}`);
+    }
+    showMessage(29);
+    showMessage(0);
+    showMessage(22);
+}
