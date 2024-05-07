@@ -151,5 +151,21 @@
 .todoHide button {
     border-radius: 50%;
 }
-
-
+.circle-checkbox {
+    display: none;
+  }
+  
+  .circle-checkbox + label {
+    display: none;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    line-height: 1em;
+    text-align: center;
+  }
+  .circle-checkbox:checked+label:after{
+    content: "\2713";
+  }
