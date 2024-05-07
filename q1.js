@@ -335,3 +335,18 @@ It should return the value of the property with key equal to the value of the st
     showMessage(0);
     showMessage(22);
 }
+
+//countVowels
+{
+    const str = "Hey JS! You R AMAZING";
+    const vowels = ['a','e','i','o','u'];
+    function countVowels(data){
+        LowerStr = data.toLowerCase();
+        arr1 = LowerStr.split("");
+        arr2 = arr1.filter((element)=>{
+            return vowels.indexOf(element) !== -1;
+        }).length
+        console.log(arr2)
+    }
+    countVowels(str);   
+}

@@ -145,6 +145,11 @@
     align-items: center;
     
 }
-
+.todoHide{
+    display: flex;
+}
+.todoHide button {
+    border-radius: 50%;
+}
 
 
