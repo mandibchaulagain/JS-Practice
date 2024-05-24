@@ -171,3 +171,39 @@
   .circle-checkbox:checked+label:after{
     content: "\2713";
   }
+  .styled-container{
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px auto;
+  }
+  .styled-container p {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  .styled-container details {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  .styled-container summary {
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff;
+  }
+  .styled-container details[open] summary {
+    color: #0056b3;
+  }
+  .styled-container details p {
+    margin: 10px 0 0;
+    color: #555;
+    line-height: 1.4em;
+  }
